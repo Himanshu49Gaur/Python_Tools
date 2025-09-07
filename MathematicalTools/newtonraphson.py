@@ -260,3 +260,9 @@ class NewtonRaphsonApp(QMainWindow):
         self.solution_display.append("\n--- FAILED TO CONVERGE ---\n")
         self.solution_display.append(f"The solution did not converge within {max_iter} iterations.")
         self.solution_display.append(self.format_matrix(x, "Last Calculated Solution (x)"))
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = NewtonRaphsonApp()
+    window.show()
+    sys.exit(app.exec_())
