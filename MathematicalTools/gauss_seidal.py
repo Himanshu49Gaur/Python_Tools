@@ -253,3 +253,10 @@ class GaussSeidelApp(QMainWindow):
         self.solution_display.append("\n--- FAILED TO CONVERGE ---\n")
         self.solution_display.append(f"The solution did not converge within {max_iter} iterations.")
         self.solution_display.append(self.format_vector(x, "Last Calculated Solution (x)"))
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = GaussSeidelApp()
+    window.show()
+    sys.exit(app.exec_())
