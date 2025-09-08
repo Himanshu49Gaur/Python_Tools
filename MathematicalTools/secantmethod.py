@@ -200,3 +200,12 @@ class SecantApp(QMainWindow):
         self.solution_display.append("\n--- FAILED TO CONVERGE ---\n")
         self.solution_display.append(f"The solution did not converge within {max_iter} iterations.")
         self.solution_display.append(f"Last calculated root x = {x_curr:.10f}")
+
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = SecantApp()
+    window.show()
+    sys.exit(app.exec_())
+
