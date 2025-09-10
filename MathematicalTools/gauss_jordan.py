@@ -223,3 +223,9 @@ class GaussJordanApp(QMainWindow):
         self.solution_display.append("\n--- ELIMINATION COMPLETE ---\n")
         self.solution_display.append(self.format_matrix(M, "Final Reduced Row Echelon Form [I|x]"))
         self.solution_display.append(self.format_matrix(solution.flatten(), "Final Solution Vector (x)"))
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = GaussJordanApp()
+    window.show()
+    sys.exit(app.exec_())
