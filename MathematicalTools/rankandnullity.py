@@ -218,3 +218,12 @@ class RankNullityApp(QMainWindow):
         self.solution_display.append(f"Nullity(A) = {nullity}")
         self.solution_display.append("  - Calculated using the Rank-Nullity Theorem: Rank(A) + Nullity(A) = n.")
         self.solution_display.append("  - It represents the dimension of the null space (the number of vectors 'x' for which Ax = 0).")
+
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = RankNullityApp()
+    window.show()
+    sys.exit(app.exec_())
+
