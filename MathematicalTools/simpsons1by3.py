@@ -245,3 +245,6 @@ if __name__ == '__main__':
     window = SimpsonsApp()
     window.show()
     sys.exit(app.exec_())
+
+import numpy
+import sys
