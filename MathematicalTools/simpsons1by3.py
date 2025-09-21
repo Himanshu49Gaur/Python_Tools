@@ -238,3 +238,10 @@ class SimpsonsApp(QMainWindow):
 
         self.solution_display.append("\n--- FINAL RESULT ---\n")
         self.solution_display.append(f"The approximate value of the integral is: {integral_val:.10f}")
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = SimpsonsApp()
+    window.show()
+    sys.exit(app.exec_())
