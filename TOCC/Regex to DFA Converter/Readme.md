@@ -63,5 +63,7 @@ To run this project, have the backend server running and the frontend open in a 
 ### Backend Setup
 
 First, install the required Python libraries:
+``pip install Flask Flask-Cors``
+
 
 
