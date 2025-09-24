@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex to DFA Converter</title>
+    <!-- vis.js library for graph visualization -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #0056b3;
+            font-size: 2em;
+        }
+        
+        header p {
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .input-area {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        #regex-input {
+            flex-grow: 1;
+            padding: 12px;
+            font-size: 1.1em;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        
+        #convert-btn {
+            padding: 12px 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        #convert-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        .result-section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-top: 20px;
+        }
+        
+        .result-section h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .graph-container {
+            width: 100%;
+            height: 450px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background-color: #fafafa;
+        }
+        
+        .explanation {
+            background-color: #e9f5ff;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            font-size: 0.9em;
+            border-radius: 4px;
+        }
+        
+        .hidden { display: none; }
+
+        #spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Theory of Computation: Regex to DFA</h1>
+            <p>Enter a regular expression to visualize its conversion to an ε-NFA and then to a DFA.</p>
+            <div class="input-area">
+                <input type="text" id="regex-input" placeholder="e.g., (a|b)*abb" value="(a|b)*a">
+                <button id="convert-btn">Convert</button>
+            </div>
+        </header>
+
+        <div id="results" class="hidden">
+            <!-- Summary Section -->
+            <div class="result-section">
+                <h2>Summary</h2>
+                <div id="summary-explanation" class="explanation"></div>
+            </div>
+
+            <!-- Epsilon-NFA Section -->
+            <div class="result-section">
+                <h2>Step 1: Regular Expression to ε-NFA</h2>
+                <div class="explanation">
+                    The regex is first converted to a postfix expression to handle operator precedence. 
+                    Then, using Thompson's Construction, we build the ε-NFA. Each operator (*, |, concatenation) 
+                    has a specific rule for combining smaller NFAs into a larger one.
+                </div>
+                <div id="nfa-graph" class="graph-container"></div>
+            </div>
+
+            <!-- DFA Section -->
+            <div class="result-section">
+                <h2>Step 2: ε-NFA to DFA</h2>
+                <div class="explanation">
+                    The DFA is constructed from the ε-NFA using the <strong>subset construction</strong> algorithm.
+                    Each state in the DFA corresponds to a set of states from the NFA. The process starts with the
+                    ε-closure of the NFA's start state. Below is a step-by-step log of how each DFA state and its transitions were computed.
+                </div>
+                <div id="dfa-conversion-steps" class="explanation"></div>
+                <h3 style="margin-top: 25px;">Final DFA Graph</h3>
+                <div id="dfa-graph" class="graph-container"></div>
+            </div>
+        </div>
+
+        <div id="spinner" class="hidden"></div>
+    </div>
+
+    <script>
+        const regexInput = document.getElementById('regex-input');
+        const convertBtn = document.getElementById('convert-btn');
+        const resultsDiv = document.getElementById('results');
+        const spinner = document.getElementById('spinner');
+        const summaryExplanation = document.getElementById('summary-explanation');
+        const dfaConversionSteps = document.getElementById('dfa-conversion-steps');
+
+        // --- VIS.JS Drawing Function ---
+        function drawAutomaton(containerId, data, isDFA = false) {
+            const container = document.getElementById(containerId);
+            const nodes = new vis.DataSet(data.nodes);
+            const edges = new vis.DataSet(data.edges);
+
+            // Style start and final states
+            nodes.get({
+                filter: item => item.id === data.start_state
+            }).forEach(node => {
+                nodes.update({ ...node, color: { background: '#a4ffa4', border: '#008000' }});
+            });
+
+            const final_states = Array.isArray(data.final_states) ? data.final_states : [data.final_state];
+            final_states.forEach(finalId => {
+                 nodes.get({
+                    filter: item => item.id === finalId
+                }).forEach(node => {
+                    nodes.update({ ...node, shape: 'doubleBorder', color: { background: '#ffc8c8', border: '#c00000' } });
+                });
+            });
+
+            const networkData = { nodes: nodes, edges: edges };
+            const options = {
+                layout: {
+                    hierarchical: {
+                        direction: 'LR', // Left to Right
+                        sortMethod: 'directed',
+                    },
+                },
+                edges: {
+                    arrows: 'to',
+                    font: { align: 'top' },
+                },
+                physics: false,
+            };
+
+            new vis.Network(container, networkData, options);
+        }
+
+        // --- API Call and Rendering Logic ---
+        async function handleConversion() {
+            const regex = regexInput.value;
+            if (!regex) {
+                alert('Please enter a regular expression.');
+                return;
+            }
+
+            resultsDiv.classList.add('hidden');
+            spinner.classList.remove('hidden');
+
+            try {
+                const response = await fetch('http://127.0.0.1:5001/convert', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ regex: regex }),
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                renderResults(data);
+
+            } catch (error) {
+                alert(`Error: ${error.message}`);
+            } finally {
+                spinner.classList.add('hidden');
+            }
+        }
+
+        function renderResults(data) {
+            // Summary
+            summaryExplanation.innerText = `Original Regex: ${data.regex}\n` +
+                                           `Regex with explicit concatenation: ${data.formatted_regex}\n` +
+                                           `Postfix Expression: ${data.postfix}\n` +
+                                           `Alphabet (Σ): {${data.alphabet.split('').join(', ')}}`;
+
+            // Draw NFA
+            drawAutomaton('nfa-graph', {
+                nodes: data.nfa.nodes,
+                edges: data.nfa.edges,
+                start_state: data.nfa.start_state,
+                final_state: data.nfa.final_state
+            });
+            
+            // Show DFA conversion steps
+            let dfaStepsHtml = '';
+            data.dfa.conversion_steps.forEach(step => {
+                dfaStepsHtml += `${step.title}\n`;
+                step.transitions.forEach(trans => {
+                    dfaStepsHtml += `${trans}\n`;
+                });
+                dfaStepsHtml += '\n';
+            });
+            dfaConversionSteps.innerText = dfaStepsHtml;
+
+            // Draw DFA
+            drawAutomaton('dfa-graph', {
+                nodes: data.dfa.nodes,
+                edges: data.dfa.edges,
+                start_state: data.dfa.start_state,
+                final_states: data.dfa.final_states
+            }, true);
+
+            resultsDiv.classList.remove('hidden');
+        }
+
+        convertBtn.addEventListener('click', handleConversion);
+        regexInput.addEventListener('keyup', (event) => {
+            if (event.key === 'Enter') {
+                handleConversion();
+            }
+        });
+    </script>
+</body>
+</html>
