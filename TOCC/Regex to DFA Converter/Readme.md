@@ -67,3 +67,25 @@ First, install the required Python libraries:
 
 
 
+
+The server typically runs on [http://127.0.0.1:5001](http://127.0.0.1:5001). Keep this terminal window open.
+
+### Frontend Setup
+
+Open the `index.html` file in any modern web browser.
+
+## Usage
+
+- With the backend running, open `index.html`.
+- Enter a regular expression in the input box. Supported operators:
+  - `|` for union (e.g., `a|b`)
+  - `*` for Kleene star (e.g., `a*`)
+  - `()` for grouping (e.g., `(ab)*`)
+  - Concatenation is implicit (e.g., `ab` means a followed by b)
+- Click the "Convert" button.
+- The application will display:
+  - The intermediate postfix expression
+  - The generated ε-NFA
+  - Step-by-step DFA conversion logic
+  - The final DFA graph
+
