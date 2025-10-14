@@ -1,54 +1,108 @@
-# Himanshu's Python Toolkit
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-Welcome to my personal collection of Python tools and projects. This repository serves as a dynamic showcase of various scripts and applications I've developed. My vision is for this to be an ever-growing toolkit that spans multiple domains, from cybersecurity to machine learning and beyond.
-
----
-
-## About This Repository
-
-This is a multi-project repository, designed to house a diverse range of standalone Python tools. The goal is to explore different facets of programming and problem-solving with Python. Each project is organized into a specific category, making it easy to navigate and explore.
-
-The primary categories you'll find here include:
-
-* **Cyber Tools**: Scripts and applications focused on security, encryption, and network analysis.
-* **Mathematical Tools**: Utilities for performing complex calculations, data analysis, or mathematical simulations.
-* **Machine Learning**: Implementations of ML models, data processing scripts, and experiments.
-* **Core Python Tools**: General-purpose utilities, automation scripts, and demonstrations of core Python concepts.
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=00F5FF&width=600&lines=Hi%2C+I'm+Himanshu+Gaur;Cybersecurity+Enthusiast+%26+AI+Developer;Welcome+to+My+Python+Toolkit!" alt="Typing Animation"/>
+</div>
 
 ---
 
-## Repository Structure
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Himanshu49Gaur&show_icons=true&theme=vision-friendly-dark&hide_border=true&count_private=true" width="47%"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Himanshu49Gaur&theme=vision-friendly-dark&hide_border=true" width="47%"/>
+</div>
 
-This repository is organized hierarchically to keep projects distinct and easy to navigate. The structure is as follows:
+<div align="center">
+  <img src="https://i.ibb.co/fnJvKjs/cyber-card.gif" width="80%" alt="Cyber Intro Card"/>
+</div>
 
-* **`Repository_Root/`**
-    * This is the top-level directory.
-    * It contains the main `README.md` file (the document you are currently reading).
-    * It also contains the primary category folders.
+#  Himanshu's Python Toolkit
 
-* **`Category_Name/`**
-    * Each folder at this level represents a broad category of tools (e.g., `Cyber_Tools`, `Machine_Learning`, `Data_Analysis`).
-    * These folders act as containers for individual project directories.
-
-* **`Project_Name/`**
-    * Each project is housed in its own self-contained directory within a category folder.
-    * This ensures that project files, dependencies, and documentation do not conflict with one another.
-
-* **Inside each `Project_Name/` folder:**
-    * **Source Code:** Contains all the necessary Python scripts (`.py`) and related files for the tool to function.
-    * **`README.md`:** A dedicated, project-specific README file is included. This file provides detailed information on what the tool does, its features, and, most importantly, how to install and run it.
-    * **`requirements.txt` (Optional):** If a specific tool depends on external Python libraries, this file will be present, listing all necessary dependencies for easy installation via `pip`.
+Welcome to my **personal collection of Python tools and projects** — an evolving space where **cybersecurity**, **machine learning**, and **AI-powered utilities** converge.  
+This repository reflects my journey as a **developer, researcher, and builder**, continuously expanding my toolkit to tackle new challenges.
 
 ---
 
-## How to Use This Repository
+##  About This Repository
 
-1.  **Browse the Categories**: Start by exploring the main category folders (`Cyber_Tools`, `Machine_Learning`, etc.).
-2.  **Select a Project**: Navigate into the folder of the project that interests you.
-3.  **Read the Project README**: For detailed instructions on installation, dependencies, and usage, please refer to the `README.md` file located inside that specific project's directory.
+This is a **multi-project repository** that houses various standalone Python-based tools and frameworks.  
+Each tool is categorized to ensure clarity, scalability, and organization.
+
+###  Primary Categories
+
+-  **Cyber Tools** — Vulnerability scanners, reconnaissance utilities, and network security analyzers.  
+-  **Mathematical Tools** — Data analysis, numerical computations, and algorithmic simulations.  
+-  **Machine Learning** — Model implementations, datasets, and real-world AI experiments.  
+-  **Core Python Tools** — Automation, file handling, and logic-based utilities for daily use.
 
 ---
 
-## Vision and Future Goals
 
-This repository is an active and ongoing endeavor. I will be adding new projects and refining existing ones over time. The aim is to build a robust and varied portfolio that demonstrates practical applications of Python in different fields.
+Each **project folder** is self-contained, featuring:
+- A dedicated `README.md` for setup and usage instructions.  
+- `requirements.txt` for dependency management.  
+- Cleanly structured Python scripts following best practices.
+
+---
+
+##  How to Use
+
+1. **Explore the categories** — Start from any folder like `Cyber_Tools` or `Machine_Learning`.  
+2. **Choose a project** — Dive into its folder.  
+3. **Follow its README** — Each project explains setup, dependencies, and usage clearly.  
+4. **Experiment and contribute!** — Feel free to fork, modify, or suggest enhancements.
+
+---
+
+## 🚀 Vision & Future Goals
+
+This repository is a **living collection**, regularly updated with new tools and experiments.  
+My goal is to blend **Pythonic creativity** with **real-world utility** across domains like:
+
+-  Automated Penetration Testing Frameworks  
+-  Biomedical AI Models  
+-  Data-driven Analytics Systems  
+-  Open-source Contributions  
+
+>  **The ultimate vision: Build a comprehensive AI-powered cybersecurity & Python research ecosystem.**
+
+---
+
+## 🧩 Tech Stack & Skills
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+  <img src="https://img.shields.io/badge/Cybersecurity-181717?style=for-the-badge&logo=kalilinux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Machine_Learning-102230?style=for-the-badge&logo=scikitlearn&logoColor=white" />
+  <img src="https://img.shields.io/badge/AI_Research-0F9D58?style=for-the-badge&logo=ai&logoColor=white" />
+</div>
+
+---
+
+## 💬 About Me
+
+<details>
+  <summary>Click to Expand</summary>
+
+-  **Name:** Himanshu Gaur  
+-  **B.Tech Student, VIT Bhopal (Graduating 2027)**  
+-  **Cybersecurity Enthusiast | AI Developer | Research Explorer**    
+-  **Skilled in: Python, PyTorch, Flask, CUDA, Streamlit, Scikit-learn, and LangChain**  
+-  Reach me at: **[himanshugaurnext@gmail.com](mailto:himanshugaurnext@gmail.com)**  
+-  [GitHub](https://github.com/Himanshu49Gaur) • [LinkedIn](https://linkedin.com/in/himanshu-gaur-305006282)
+
+</details>
+
+---
+
+<p align="center">
+  <b><i>"Code. Secure. Innovate. Repeat."</i></b>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg" alt="snake animation" />
+</p>
