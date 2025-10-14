@@ -220,3 +220,13 @@ class RK4App(QMainWindow):
         self.solution_display.append("\n--- CALCULATION COMPLETE ---\n")
         # Use x_target for final display to avoid floating point accumulation errors on x
         self.solution_display.append(f"The approximate value of y at x = {x_target:.4f} is: {y_current:.8f}")
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    # --- How to Install Dependencies ---
+    # You will need PyQt5, NumPy, and SymPy. Install them using pip:
+    # pip install PyQt5 numpy sympy
+    window = RK4App()
+    window.show()
+    sys.exit(app.exec_())
