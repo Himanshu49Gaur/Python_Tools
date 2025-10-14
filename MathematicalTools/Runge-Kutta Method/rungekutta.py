@@ -224,9 +224,6 @@ class RK4App(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    # --- How to Install Dependencies ---
-    # You will need PyQt5, NumPy, and SymPy. Install them using pip:
-    # pip install PyQt5 numpy sympy
     window = RK4App()
     window.show()
     sys.exit(app.exec_())
