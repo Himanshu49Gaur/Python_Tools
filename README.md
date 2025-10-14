@@ -6,14 +6,6 @@
 
 ---
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Himanshu49Gaur&show_icons=true&theme=vision-friendly-dark&hide_border=true&count_private=true" width="47%"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Himanshu49Gaur&theme=vision-friendly-dark&hide_border=true" width="47%"/>
-</div>
-
-<div align="center">
-  <img src="https://i.ibb.co/fnJvKjs/cyber-card.gif" width="80%" alt="Cyber Intro Card"/>
-</div>
 
 #  Himanshu's Python Toolkit
 
