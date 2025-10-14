@@ -52,3 +52,18 @@ Given:
 Repeat these steps to approximate the solution over the desired interval[web:1].
 
 ---
+
+## Real-World Applications
+
+RK4 is widely used for modeling systems with time-dependent behavior:
+
+- **Physics & Engineering**: Orbital mechanics, electrical circuits, mechanical vibrations, fluid dynamics.
+- **Biology & Chemistry**: Population dynamics, chemical reaction rates, epidemiological models.
+- **Finance**: Pricing derivatives, modeling interest rates[web:1].
+
+---
+
+## References
+
+- Carl Runge and Martin Kutta, "Über die numerische Auflösung von Differentialgleichungen," 1901.
+- Numerical Methods textbooks and engineering simulation guides[web:1].
