@@ -13,3 +13,18 @@ The Runge-Kutta methods are a group of powerful algorithms for numerically solvi
 - RK methods are fundamental in simulations across science, engineering, biology, and finance due to their reliability and accuracy[web:1].
 
 ---
+
+# Core Idea: Weighted Slopes for Better Estimates
+
+Given a first-order ODE:
+
+\[
+\frac{dy}{dx} = f(x, y)
+\]
+
+With initial condition \( y(x_0) = y_0 \) and step size \( h \):
+
+- **Euler Method**: Uses only the initial slope, often yields poor accuracy.
+- **Runge-Kutta Methods**: Calculate a weighted average of several slopes at different points, capturing solution curvature more accurately[web:1].
+
+---
