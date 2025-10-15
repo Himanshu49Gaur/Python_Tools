@@ -239,3 +239,10 @@ class SimpsonsDualApp(QMainWindow):
         self.solution_display.append(f"   Integral ≈ (3*{h:.6f}/8) * [{y0:.6f} + {3*sum_mult_3:.6f} + {2*sum_mult_2:.6f} + {yn:.6f}]")
         self.solution_display.append(f"   Integral ≈ {3*h/8:.6f} * [{y0 + 3*sum_mult_3 + 2*sum_mult_2 + yn:.6f}]")
         self.solution_display.append(f"\n--- FINAL RESULT ---\nApproximate Integral = {integral_val:.10f}")
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = SimpsonsDualApp()
+    window.show()
+    sys.exit(app.exec_())
