@@ -194,3 +194,9 @@ class EulerApp(QMainWindow):
         
         self.solution_display.append("\n--- CALCULATION COMPLETE ---\n")
         self.solution_display.append(f"The approximate value of y at x = {x_target:.4f} is: {y_current:.8f}")
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = EulerApp()
+    window.show()
+    sys.exit(app.exec_())
