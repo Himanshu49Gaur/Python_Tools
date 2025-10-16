@@ -62,3 +62,53 @@ Due to its simplicity and low accuracy, the Euler method is often used for:
 - **Simple Simulations:** Real-time physics in games where performance outweighs precision
 
 ---
+
+## 2. The Modified Euler Method (Heun's Method)
+
+### History and Origin
+The **Modified Euler Method**, also known as **Heun's Method**, was developed by German mathematician **Karl Heun** in 1900. It is a second-order **Runge-Kutta method** and part of the broader predictor-corrector family.
+
+### The Core Idea: Averaging the Slopes
+The main weakness of the standard Euler method is that it uses only the initial slope at the start of the interval. The Modified Euler Method refines this by:
+1. **Predicting:** Perform a standard Euler step to predict a rough next point.  
+2. **Correcting:** Calculate the slope at this predicted point, average it with the initial slope, and then use this average slope for a corrected final step.
+
+This averaging provides a more accurate representation of the true curve.
+
+### The Formulae
+Given the same ODE \( \frac{dy}{dx} = f(x, y) \) with initial condition \( (x_0, y_0) \):
+
+**Step 1: Predictor**
+
+\[
+y_{n+1}^* = y_n + h \cdot f(x_n, y_n)
+\]
+
+**Step 2: Corrector**
+
+\[
+y_{n+1} = y_n + \frac{h}{2} [f(x_n, y_n) + f(x_{n+1}, y_{n+1}^*)]
+\]
+
+### Step-by-Step Algorithm
+1. **Define the Problem:** Specify \( \frac{dy}{dx} = f(x, y) \), initial condition \( (x_0, y_0) \), step size \( h \), and target \( x \).
+2. **Initialization:** Start with \( n = 0 \), using initial values \( x_0, y_0 \).
+3. **Calculate Initial Slope:** \( \text{slope}_{start} = f(x_n, y_n) \).
+4. **Predictor Step:** \( y_{n+1}^* = y_n + h \cdot \text{slope}_{start} \).
+5. **Calculate End Slope:** \( \text{slope}_{end} = f(x_n + h, y_{n+1}^*) \).
+6. **Corrector Step:** \( y_{n+1} = y_n + \frac{h}{2}(\text{slope}_{start} + \text{slope}_{end}) \).
+7. **Update x:** \( x_{n+1} = x_n + h \).
+8. **Iterate:** Repeat steps 3–7 until reaching the target \( x \).
+
+### Mathematical Importance
+- Second-order method:
+  - Local error: \( O(h^3) \)  
+  - Global error: \( O(h^2) \)
+- More accurate than the standard Euler method for the same step size  
+- Demonstrates the **predictor-corrector** concept central to Runge-Kutta methods
+
+### Real-Life Applications
+The improved accuracy makes it suitable for a range of problems:
+- **Simple Mechanics:** Kinematic or motion problems where force depends on position or velocity  
+- **Population Dynamics:** Predator-prey or ecosystem modeling  
+- **Chemical Kinetics:** Reaction rate modeling over time
