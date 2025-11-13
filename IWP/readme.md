@@ -123,3 +123,14 @@ The curriculum recommends the following books for deeper study:
 - Internet and World Wide Web: How to Program, 5th Edition by Paul Dietel, Harvey Dietel, Abbey Dietel (Pearson, 2012)
 
 ---
+
+## Building Modern Web Applications
+
+By the end of this module, you’ll be equipped to:
+
+- Distinguish and implement web protocols and architecture.
+- Develop interactive websites using HTML5, CSS3, JavaScript, JQuery, XML, AJAX, PHP, MySQL, and Perl.
+- Integrate advanced solutions using NodeJS, AngularJS, and JSON for scalable, contemporary web projects.
+- Apply validation, user interface principles, and data persistence strategies across multi-tier applications[file:1].
+
+---
