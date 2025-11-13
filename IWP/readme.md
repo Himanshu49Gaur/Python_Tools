@@ -42,3 +42,8 @@ Here’s how the subject is structured, covering essential topics and practical 
 - **Web Browsers & Servers:** Roles, types, communication mechanisms.
 - **Web System Architecture:** Understanding URLs, domain names.
 - **Client & Server-side Scripting:** Definitions and differences.
+
+### Unit 2: HTML and CSS
+
+- **HTML5 Basics:** Elements, formatting, working with colors, images, links, tables, lists, forms, canvas, and media tags.
+- **CSS3 Basics:** Selectors, box model, backgrounds, borders, text effects, advanced features for responsive design.
