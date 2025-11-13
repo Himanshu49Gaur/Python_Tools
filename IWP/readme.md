@@ -29,3 +29,16 @@ Upon completion, you will be able to:
 - Create dynamic web solutions using Perl, NodeJS, AngularJS, JSON, and AJAX[file:1].
 
 ---
+
+## Detailed Syllabus Structure
+
+Here’s how the subject is structured, covering essential topics and practical skills:
+
+### Unit 1: Introduction to Web Systems
+
+- **Internet Overview:** Concepts of the web, history, and architecture.
+- **WWW (World Wide Web):** Structure, standards, and protocols.
+- **Web Protocols:** HTTP, HTTPS, FTP, SMTP, and others.
+- **Web Browsers & Servers:** Roles, types, communication mechanisms.
+- **Web System Architecture:** Understanding URLs, domain names.
+- **Client & Server-side Scripting:** Definitions and differences.
