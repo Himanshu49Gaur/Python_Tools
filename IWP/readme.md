@@ -134,3 +134,12 @@ By the end of this module, you’ll be equipped to:
 - Apply validation, user interface principles, and data persistence strategies across multi-tier applications[file:1].
 
 ---
+
+## Contribution Guidelines
+
+- All project submissions should follow best practices in code organization and documentation.
+- Each lab/project folder must include code files, a brief description, and screenshots where applicable.
+- Use Markdown for documenting solutions and steps.
+- For collaborative projects, use Pull Requests with clear commit messages.
+
+---
