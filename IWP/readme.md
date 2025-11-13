@@ -17,3 +17,15 @@ This course introduces the fundamental aspects of Internet and web programming, 
 - Grasp the **client-server programming** model and its use in web applications.
 - Utilize **scripting languages** for front-end and back-end development, recognizing their limitations.
 - Build **interactive web applications** and comprehend modern web frameworks.
+
+### Expected Learning Outcomes
+
+Upon completion, you will be able to:
+
+- Differentiate web protocols and web architectures[file:1].
+- Implement client-side scripting using JavaScript.
+- Utilize PHP for server-side scripting.
+- Develop XML-based and AJAX-powered web applications.
+- Create dynamic web solutions using Perl, NodeJS, AngularJS, JSON, and AJAX[file:1].
+
+---
