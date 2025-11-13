@@ -106,3 +106,20 @@ Practical exercises form the heart of the IWP curriculum. Below are some lab ass
 - Practice Perl array operations: create, index manipulation, resizing, and printing.
 
 ---
+
+## Reference and Text Books
+
+The curriculum recommends the following books for deeper study:
+
+| Book                                                         | Author(s)                        | Publisher, Year         | Notes                        |
+|--------------------------------------------------------------|----------------------------------|-------------------------|------------------------------|
+| HTML and CSS, Complete Reference, Fifth Edition              | Thomas Powell                    | McGraw Hill, 2010       | Core HTML & CSS resource[file:1] |
+| JavaScript The Complete Reference                            | Thomas Powell, Fritz Schneider   | McGraw Hill, 2013       | In-depth JavaScript guide[file:1]  |
+| Perl Cookbook                                                | Christiansen, Torkington         | O'Reilly, 2012          | Essential Perl programming[file:1]|
+| PHP Solutions: Dynamic web page design made easy             | David Powers                     | Apress, 2010            | PHP development techniques[file:1]|
+| Beginning XML, 5th Edition                                   | Fawcett, Ayers, Quin             | Wrox, 2012              | XML and schema[file:1]           |
+
+**Reference Book:**
+- Internet and World Wide Web: How to Program, 5th Edition by Paul Dietel, Harvey Dietel, Abbey Dietel (Pearson, 2012)[file:1]
+
+---
