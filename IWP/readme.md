@@ -47,3 +47,10 @@ Here’s how the subject is structured, covering essential topics and practical 
 
 - **HTML5 Basics:** Elements, formatting, working with colors, images, links, tables, lists, forms, canvas, and media tags.
 - **CSS3 Basics:** Selectors, box model, backgrounds, borders, text effects, advanced features for responsive design.
+
+### Unit 3: JavaScript and JQuery
+
+- **JavaScript Essentials:** Functions, arrays, DOM manipulation, built-in objects, event handling, and validations.
+- **Regular Expressions:** Input validation and pattern matching.
+- **JSON:** Data interchange between client and server.
+- **JQuery:** Simplifying DOM operations, plugins, and UI interactions[file:1].
