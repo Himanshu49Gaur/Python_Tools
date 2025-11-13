@@ -131,7 +131,7 @@ By the end of this module, you’ll be equipped to:
 - Distinguish and implement web protocols and architecture.
 - Develop interactive websites using HTML5, CSS3, JavaScript, JQuery, XML, AJAX, PHP, MySQL, and Perl.
 - Integrate advanced solutions using NodeJS, AngularJS, and JSON for scalable, contemporary web projects.
-- Apply validation, user interface principles, and data persistence strategies across multi-tier applications[file:1].
+- Apply validation, user interface principles, and data persistence strategies across multi-tier applications.
 
 ---
 
@@ -155,11 +155,11 @@ By the end of this module, you’ll be equipped to:
 ## FAQ
 
 1. **Is prior experience in Java mandatory?**
-   - Yes, foundational knowledge is required, but tutorials for beginners are included[file:1].
+   - Yes, foundational knowledge is required, but tutorials for beginners are included.
 2. **Are all lab experiments required?**
-   - Yes, each experiment contributes to overall learning outcomes and assessment[file:1].
+   - Yes, each experiment contributes to overall learning outcomes and assessment.
 3. **Can I use frameworks like AngularJS and NodeJS in projects?**
-   - Absolutely! Modern frameworks are covered and encouraged for advanced projects[file:1].
+   - Absolutely! Modern frameworks are covered and encouraged for advanced projects.
 
 ---
 
