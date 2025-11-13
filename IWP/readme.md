@@ -53,4 +53,18 @@ Here’s how the subject is structured, covering essential topics and practical 
 - **JavaScript Essentials:** Functions, arrays, DOM manipulation, built-in objects, event handling, and validations.
 - **Regular Expressions:** Input validation and pattern matching.
 - **JSON:** Data interchange between client and server.
-- **JQuery:** Simplifying DOM operations, plugins, and UI interactions[file:1].
+- **JQuery:** Simplifying DOM operations, plugins, and UI interactions.
+
+  ### Unit 4: XML and AJAX
+
+- **PL/SQL:** Declaring variables, using SQL inside PL/SQL.
+- **XML Fundamentals:** Parsing, DOM, XPath, XSL/XSLT, XQuery, DTD, Schema, namespaces.
+- **AJAX:** Asynchronous data transfer, XML/Javascript/JQuery-driven AJAX applications[file:1].
+
+### Unit 5: PHP and MySQL
+
+- **PHP Basics:** Arrays, functions, managing forms and files, date and time management.
+- **MySQL:** Database connectivity from PHP, managing sessions, cookies, email.
+- **PHP with XML & AJAX:** Building dynamic, integrated applications[file:1].
+
+---
