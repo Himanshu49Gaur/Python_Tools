@@ -68,3 +68,12 @@ Here’s how the subject is structured, covering essential topics and practical 
 - **PHP with XML & AJAX:** Building dynamic, integrated applications[file:1].
 
 ---
+
+## Recommended Mode of Learning
+
+- **Flipped Classroom:** Interactive, student-driven sessions.
+- **Digital Models:** Tutorials augmented with computer-based simulations.
+- **Industry Expert Lectures:** Exposure to real-world contemporary topics.
+- **Practice & Tutorial Sessions:** Extensive coding and project-based exercises.
+
+---
