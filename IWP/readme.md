@@ -77,3 +77,14 @@ Here’s how the subject is structured, covering essential topics and practical 
 - **Practice & Tutorial Sessions:** Extensive coding and project-based exercises.
 
 ---
+
+## Assessment and Evaluation
+
+Evaluation methods may include:
+
+- Open-book examinations and quizzes.
+- Student portfolio creation and assessment.
+- Innovative in-class activities.
+- Continuous and final assessment tests.
+
+---
