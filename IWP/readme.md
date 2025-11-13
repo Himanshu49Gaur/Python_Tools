@@ -88,3 +88,21 @@ Evaluation methods may include:
 - Continuous and final assessment tests.
 
 ---
+
+## Lab Experiments and Projects
+
+Practical exercises form the heart of the IWP curriculum. Below are some lab assignments, projects, and experiments mapped to student outcomes:
+
+- Analyze and improve the IRCTC website using HTML.
+- Design an interactive English alphabet chart with example display via image mapping in HTML.
+- Build a periodic table using CSS for layout and styling.
+- Validate ISBN numbers with regular expressions in JavaScript.
+- Develop a Tic-Tac-Toe game using JavaScript.
+- Create an online application to find matrix transposes based on user input in JavaScript.
+- Develop a hospital registration form with field validation in JavaScript.
+- Implement a shopping cart application using PHP sessions.
+- Construct an online quiz application in PHP, maintaining Q&A within a database.
+- Manage student details in XML, validate data ordering via schema, group names, enforce phone number format constraints, and design a robust root structure.
+- Practice Perl array operations: create, index manipulation, resizing, and printing.
+
+---
