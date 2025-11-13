@@ -143,3 +143,28 @@ By the end of this module, you’ll be equipped to:
 - For collaborative projects, use Pull Requests with clear commit messages.
 
 ---
+
+## Additional Resources
+
+- Sample source code snippets and templates for major topics.
+- Links to online tutorials and references specified in the recommended books.
+- Practice quizzes and review questions for interview and exam preparation.
+
+---
+
+## FAQ
+
+1. **Is prior experience in Java mandatory?**
+   - Yes, foundational knowledge is required, but tutorials for beginners are included[file:1].
+2. **Are all lab experiments required?**
+   - Yes, each experiment contributes to overall learning outcomes and assessment[file:1].
+3. **Can I use frameworks like AngularJS and NodeJS in projects?**
+   - Absolutely! Modern frameworks are covered and encouraged for advanced projects[file:1].
+
+---
+
+# Explore, Build, and Master Web Programming!
+
+**Commit, experiment, and enhance your web development skills with structured learning and real-world challenges.**
+
+---
