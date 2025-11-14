@@ -63,3 +63,18 @@ The `style.css` file provides a consistent, modern, and responsive design for al
 The CSS file is well-organized and modular, making it easy to maintain and extend. It uses modern design principles such as card layouts, subtle shadows, and responsive inputs. The consistent styling across all pages ensures a professional appearance and enhances usability. The use of gradients and hover effects adds a touch of interactivity, while the careful attention to spacing and alignment improves readability and accessibility.
 
 ---
+
+## File Structure (Updated)
+
+- `index.html` – Registration (Sign Up) page
+- `login.html` – Login (authentication) page
+- `dashboard.html` – User profile dashboard
+- `style.css` – Styling for all pages
+
+---
+
+## User Flow
+
+A[Sign Up (index.html)] --> B[Login (login.html)]
+B --> C[Dashboard (dashboard.html)]
+C -->|Logout| B
