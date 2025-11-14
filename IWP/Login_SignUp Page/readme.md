@@ -82,3 +82,12 @@ The CSS file is well-organized and modular, making it easy to maintain and exten
 
 ---
 
+## Recommendations & Potential Enhancements
+
+- Integrate client-side validation (JavaScript) for real-time feedback (e.g., password match, file type checks).
+- Add backend functionality for real authentication, session management, and secure file uploads.
+- Expand dashboard features: edit profile, settings, account deletion.
+- Implement encryption for sensitive data and secure storing mechanisms.
+- Enhance UI with CSS frameworks for better design, accessibility, and responsiveness.
+
+---
