@@ -4,4 +4,11 @@ This repository contains a simple web-based user registration, authentication, a
 
 ---
 
+## File Structure
 
+- `index.html` – Registration (Sign Up) page
+- `login.html` – Login (authentication) page
+- `dashboard.html` – User profile dashboard
+- `style.css` – Styling for all pages
+
+---
