@@ -64,7 +64,7 @@ The CSS file is well-organized and modular, making it easy to maintain and exten
 
 ---
 
-## File Structure (Updated)
+## File Structure
 
 - `index.html` – Registration (Sign Up) page
 - `login.html` – Login (authentication) page
