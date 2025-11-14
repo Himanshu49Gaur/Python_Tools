@@ -75,3 +75,10 @@ The CSS file is well-organized and modular, making it easy to maintain and exten
 
 ## User Flow
 
+1. **Registration:** New user fills out the form in `index.html`.
+2. **Login:** Registered user enters credentials in `login.html`.
+3. **Dashboard:** User sees profile and details in `dashboard.html`.
+4. **Logout:** User clicks to return to login.
+
+---
+
