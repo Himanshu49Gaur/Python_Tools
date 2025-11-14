@@ -75,6 +75,3 @@ The CSS file is well-organized and modular, making it easy to maintain and exten
 
 ## User Flow
 
-A[Sign Up (index.html)] --> B[Login (login.html)]
-B --> C[Dashboard (dashboard.html)]
-C -->|Logout| B
