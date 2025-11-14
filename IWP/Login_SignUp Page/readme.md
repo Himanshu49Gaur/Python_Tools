@@ -1,6 +1,6 @@
 # Web Application: User Authentication & Profile
 
-This repository contains a simple web-based user registration, authentication, and dashboard system using plain HTML and CSS. Below is a comprehensive README section with a detailed analysis of each file (`index.html`, `login.html`, `dashboard.html`, `style.css`) and how the user flow is implemented[file:12][file:13][file:14].
+This repository contains a simple web-based user registration, authentication, and dashboard system using plain HTML and CSS. Below is a comprehensive README section with a detailed analysis of each file (`index.html`, `login.html`, `dashboard.html`, `style.css`) and how the user flow is implemented.
 
 ---
 
@@ -17,7 +17,7 @@ This repository contains a simple web-based user registration, authentication, a
 
 ### Purpose
 
-The `style.css` file provides a consistent, modern, and responsive design for all pages in the application. It ensures a clean, user-friendly interface and improves the overall user experience across registration, login, and dashboard views[file:12][file:13][file:14].
+The `style.css` file provides a consistent, modern, and responsive design for all pages in the application. It ensures a clean, user-friendly interface and improves the overall user experience across registration, login, and dashboard views.
 
 ### Key Features
 
@@ -60,6 +60,6 @@ The `style.css` file provides a consistent, modern, and responsive design for al
 
 ### Analysis
 
-The CSS file is well-organized and modular, making it easy to maintain and extend. It uses modern design principles such as card layouts, subtle shadows, and responsive inputs. The consistent styling across all pages ensures a professional appearance and enhances usability. The use of gradients and hover effects adds a touch of interactivity, while the careful attention to spacing and alignment improves readability and accessibility[file:12][file:13][file:14].
+The CSS file is well-organized and modular, making it easy to maintain and extend. It uses modern design principles such as card layouts, subtle shadows, and responsive inputs. The consistent styling across all pages ensures a professional appearance and enhances usability. The use of gradients and hover effects adds a touch of interactivity, while the careful attention to spacing and alignment improves readability and accessibility.
 
 ---
