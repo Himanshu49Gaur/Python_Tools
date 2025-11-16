@@ -1,4 +1,4 @@
-# Mathematical Tools 🧮
+# Mathematical Tools 
 
 Welcome to the Mathematical Tools section of my Python Toolkit. This directory is dedicated to scripts and applications designed to perform, automate, and visualize a variety of mathematical tasks. These tools aim to make complex calculations more accessible and to provide practical examples of mathematical concepts in action.
 
