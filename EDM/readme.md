@@ -21,3 +21,22 @@ The EDM folder is built for:
 - **Visualization Tools:** Use of `Matplotlib`, `Plotly`, and `Seaborn` for plotting engineering data, analytics, stress/strain diagrams, heat maps, and optimization surfaces[web:16][web:20][web:22][web:23].
 - **Optimization Models:** Python files using `SciPy.optimize` and `Pyomo` for parameter and design optimization—ideal for academic and practical engineering scenarios[web:17][web:19][web:22].
 - **Data Analysis Utilities:** Scripts for processing, validating, and visualizing experimental or simulation results using `Pandas` and `NumPy`—from CSV sensor data to statistical summaries[web:19][web:20][web:22].
+
+---
+
+## Recommended Python Libraries for EDM
+
+| Library        | Purpose                                  | Example Usage                  |
+|----------------|------------------------------------------|-------------------------------|
+| NumPy          | Array/matrix operations, numerics         | Matrix calculations, statistics [web:19][web:22]|
+| SciPy          | Scientific computing, optimization        | Linear algebra, FEA, root-finding [web:22]|
+| Matplotlib     | Data visualization, charting              | Shear/moment diagrams, 2D plots [web:20][web:23]|
+| Pandas         | Data analysis, tabular data management    | Load tables, data processing [web:19][web:20][web:22]|
+| PyNite         | Finite element analysis (structural)      | Frame and beam modelling [web:16][web:20]|
+| FEniCS/SfePy   | Advanced FEA and physical simulations     | PDE solving, mesh generation [web:17][web:19]|
+| pythonOCC/FreeCAD | Parametric 3D design in CAD             | Automated 3D model generation [web:19]|
+| Plotly/Seaborn | Interactive and advanced plotting         | Stress-strain graphs, optimization plots [web:20][web:23]|
+| Pyomo          | Design optimization and algorithm prototyping | Linear/nonlinear programming [web:17]|
+| OpenCV         | Image analysis and computer vision        | Robotics, inspection tasks [web:19]|
+
+---
