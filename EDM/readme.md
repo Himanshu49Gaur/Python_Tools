@@ -40,3 +40,11 @@ The EDM folder is built for:
 | OpenCV         | Image analysis and computer vision        | Robotics, inspection tasks |
 
 ---
+
+## Best Practices for Using EDM
+
+- Write modular and well-documented Python code: Each script should explain its purpose, inputs, outputs, and logic.
+- Use Jupyter Notebooks for interactive demos and stepwise explanation, especially for simulations.
+- Visualize results: Always plot calculated data, stress maps, optimization results, etc., for clarity.
+- Integrate with other tools: Scripts may interface with CAD software, Excel sheets, or simulation reports.
+- Maintain folder structure: Group related models, data, and scripts logically—e.g., `/CAD_Automation`, `/FEA_Analysis`, `/Optimization_Projects`.
