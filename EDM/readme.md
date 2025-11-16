@@ -77,3 +77,7 @@ The EDM (“Engineering Modelling and Designs”) section acts as a practical to
 This code and content is shared for educational use. Please respect collaboration norms, credit original contributors, and use the code responsibly.
 
 ---
+
+## Contact
+
+For support, suggestions, or collaborations, reach out via repo issues or pull requests.
