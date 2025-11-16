@@ -60,6 +60,13 @@ The EDM folder is built for:
 
 ---
 
+---
+
+## Contributions
+
+Open to all! Share your design scripts, modelling cases, optimization routines, and visualization workflows in the EDM folder. Follow naming conventions and provide a README in each sub-folder for easier navigation.
+
+---
 ## Summary
 
 The EDM (“Engineering Modelling and Designs”) section acts as a practical toolbox for leveraging Python in modern engineering’s most important modelling, design, simulation, and automation problems. By working through the provided scripts and projects, users will develop skills fundamental for engineering practice and innovation in academic, research, or industrial settings
