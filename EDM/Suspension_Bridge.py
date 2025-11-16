@@ -53,3 +53,11 @@ def draw_main_cable(t, start_x, start_y, end_x, end_y, sag_height, segments, col
         y_interp = start_y - y_curve_offset
         
         t.goto(x_interp, y_interp)
+
+def draw_suspender(t, cable_x, cable_y, deck_y, color="black"):
+    t.penup()
+    t.goto(cable_x, cable_y)
+    t.pendown()
+    t.color(color)
+    t.pensize(1)
+    t.goto(cable_x, deck_y)
