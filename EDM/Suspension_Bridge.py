@@ -61,3 +61,75 @@ def draw_suspender(t, cable_x, cable_y, deck_y, color="black"):
     t.color(color)
     t.pensize(1)
     t.goto(cable_x, deck_y)
+
+def main():
+    screen = turtle.Screen()
+    screen.setup(width=1000, height=600)
+    screen.bgcolor("lightcyan")
+    screen.title("Engineering Design: Suspension Bridge Structure")
+    screen.tracer(0) # Turn off screen updates
+
+    t = turtle.Turtle()
+    t.hideturtle()
+
+    # Bridge deck height
+    deck_y = -100
+    
+    # Draw the bridge deck
+    t.penup()
+    t.goto(-450, deck_y)
+    t.pendown()
+    t.color("darkslategray")
+    t.pensize(10)
+    t.forward(900)
+
+    # Draw towers
+    tower_height = 250
+    tower_width = 30
+    draw_tower(t, -300, deck_y, tower_height, tower_width)
+    draw_tower(t, 300, deck_y, tower_height, tower_width)
+
+    # Tower tops for cable attachment
+    tower1_top_x = -300
+    tower1_top_y = deck_y + tower_height
+    tower2_top_x = 300
+    tower2_top_y = deck_y + tower_height
+
+    # Draw main suspension cable
+    sag = 150 # How much the cable sags below the tower tops
+    draw_main_cable(t, tower1_top_x, tower1_top_y, tower2_top_x, tower2_top_y, sag, 50, "darkred")
+
+    # Draw suspender cables
+    num_suspenders = 20
+    span_width = tower2_top_x - tower1_top_x
+    for i in range(1, num_suspenders):
+        # Calculate cable point for suspender
+        cable_x = tower1_top_x + i * span_width / num_suspenders
+        
+        # Recalculate y based on the main cable's curve function
+        relative_x = cable_x - tower1_top_x
+        y_curve_offset = -4 * sag / (span_width * span_width) * relative_x * (relative_x - span_width)
+        cable_y = tower1_top_y - y_curve_offset
+        
+        draw_suspender(t, cable_x, cable_y, deck_y, "gray")
+
+    # Draw anchors for main cables (simplified)
+    t.penup()
+    t.goto(-400, deck_y)
+    t.pendown()
+    t.color("darkred")
+    t.pensize(5)
+    t.setheading(135) # Angle towards the tower
+    t.forward(100)
+
+    t.penup()
+    t.goto(400, deck_y)
+    t.pendown()
+    t.setheading(45) # Angle towards the tower
+    t.forward(100)
+
+    screen.update() # Update the screen once everything is drawn
+    screen.exitonclick()
+
+if __name__ == "__main__":
+    main()
