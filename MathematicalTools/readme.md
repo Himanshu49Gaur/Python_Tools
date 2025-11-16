@@ -41,6 +41,6 @@ My primary motivation for creating these tools is to explore and apply mathemati
 
 ---
 
-### ⚠️ Disclaimer
+###  Disclaimer
 
 The tools provided in this directory are intended for **educational and illustrative purposes**. While I strive for accuracy, they are not a substitute for professional-grade, rigorously tested mathematical software. Please verify any critical results with a trusted source.
