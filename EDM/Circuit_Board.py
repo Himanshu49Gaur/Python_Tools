@@ -22,3 +22,12 @@ def draw_trace(t, start_x, start_y, length, color="green"):
         # Add small "pads" or "components" sometimes
         if random.random() < 0.1:
             draw_component_pad(t)
+
+def draw_component_pad(t):
+    pad_size = random.randint(2, 5)
+    t.dot(pad_size * 2, "gold") # A gold-colored pad
+    # Optionally draw a small square
+    t.fillcolor("gold")
+    t.begin_fill()
+    t.circle(pad_size)
+    t.end_fill()
