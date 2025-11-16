@@ -71,3 +71,9 @@ Open to all! Share your design scripts, modelling cases, optimization routines, 
 The EDM (“Engineering Modelling and Designs”) section acts as a practical toolbox for leveraging Python in modern engineering’s most important modelling, design, simulation, and automation problems. By working through the provided scripts and projects, users will develop skills fundamental for engineering practice and innovation in academic, research, or industrial settings.
 
 ---
+
+## License
+
+This code and content is shared for educational use. Please respect collaboration norms, credit original contributors, and use the code responsibly.
+
+---
