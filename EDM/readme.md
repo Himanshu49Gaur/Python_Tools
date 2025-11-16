@@ -48,3 +48,14 @@ The EDM folder is built for:
 - Visualize results: Always plot calculated data, stress maps, optimization results, etc., for clarity.
 - Integrate with other tools: Scripts may interface with CAD software, Excel sheets, or simulation reports.
 - Maintain folder structure: Group related models, data, and scripts logically—e.g., `/CAD_Automation`, `/FEA_Analysis`, `/Optimization_Projects`.
+
+---
+
+## Getting Started Guide
+
+1. **Install Prerequisites:** Use `pip install numpy scipy matplotlib pandas fenics pyNite pythonocc` as needed.
+2. **Browse Project Folders:** Find solutions and scripts by topic—CAD automation, FEA, Data analysis, etc.
+3. **Run & Experiment:** Try running scripts with example datasets or sample geometries. Tweak parameters to test model sensitivities.
+4. **Extend Models:** Use existing code as templates to build your own projects, modifying models for new engineering domains.
+
+---
