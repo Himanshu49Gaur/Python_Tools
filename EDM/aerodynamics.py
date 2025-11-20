@@ -29,3 +29,32 @@ def draw_airfoil(t, x, y, chord, camber):
         t.goto(x + px * chord, y + py * chord)
     
     t.end_fill()
+
+def draw_streamline(t, start_x, start_y, length, airfoil_x, airfoil_y, chord):
+    t.penup()
+    t.goto(start_x, start_y)
+    t.pendown()
+    t.color("blue")
+    t.pensize(1)
+    
+    step = 5
+    current_x = start_x
+    current_y = start_y
+    
+    while current_x < start_x + length:
+        # Simple potential flow simulation logic:
+        # If close to the airfoil x-range, deflect y based on proximity to y=0
+        dist_x = abs((current_x - (airfoil_x + chord/3))) # Focus deflection near leading edge
+        deflection = 0
+        
+        if abs(current_x - (airfoil_x + chord/2)) < chord:
+             # Push streamlines away from the center line
+             factor = 1500 / (dist_x + 10)
+             if current_y > airfoil_y:
+                 deflection = math.exp(-dist_x/100) * 2
+             else:
+                 deflection = -math.exp(-dist_x/100) * 2
+                 
+        t.goto(current_x, current_y + deflection)
+        current_x += step
+        # current_y += deflection # Accumulate deflection? No, just visual bending
