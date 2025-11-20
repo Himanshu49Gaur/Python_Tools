@@ -71,3 +71,6 @@ def draw_xor_gate(t, x, y, scale=1):
     # Output
     t.penup()
     t.goto(x + 35 * scale, y); t.setheading(0); t.pendown(); t.forward(35 * scale)
+
+def draw_connection_dot(t, x, y):
+    t.penup(); t.goto(x, y-3); t.pendown(); t.begin_fill(); t.circle(3); t.end_fill()
