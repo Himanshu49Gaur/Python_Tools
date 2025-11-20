@@ -74,3 +74,71 @@ def draw_xor_gate(t, x, y, scale=1):
 
 def draw_connection_dot(t, x, y):
     t.penup(); t.goto(x, y-3); t.pendown(); t.begin_fill(); t.circle(3); t.end_fill()
+
+def main():
+    screen = turtle.Screen()
+    screen.setup(width=800, height=600)
+    screen.title("Digital Logic: Half Adder Schematic (Corrected)")
+    screen.tracer(0) 
+
+    t = turtle.Turtle()
+    t.hideturtle()
+    t.speed(0)
+
+    # --- Layout Configuration ---
+    input_x = -200
+    gate_x = 50       # Gates are aligned horizontally
+    xor_y = 60        # XOR gate height
+    and_y = -60       # AND gate height
+    
+    # --- Draw Inputs Labels ---
+    t.penup(); t.goto(input_x - 20, xor_y + 40); t.write("A", font=("Arial", 16, "bold"))
+    t.penup(); t.goto(input_x - 20, and_y - 40); t.write("B", font=("Arial", 16, "bold"))
+
+    # --- Wire A (Top Signal) ---
+    # Logic: From Source A -> Split Point -> To XOR -> To AND
+    t.pensize(2)
+    t.penup(); t.goto(input_x, xor_y + 10); t.pendown() # Start at A height
+    t.goto(-50, xor_y + 10) # Go forward to split line
+    
+    # Split to XOR (Top input)
+    t.goto(gate_x - 20, xor_y + 10) 
+    
+    # Split to AND (Top input)
+    t.penup(); t.goto(-50, xor_y + 10); t.pendown()
+    t.goto(-50, and_y + 10) # Drop down
+    t.goto(gate_x, and_y + 10) # Connect to AND
+    
+    draw_connection_dot(t, -50, xor_y + 10) # Draw dot at intersection
+
+    # --- Wire B (Bottom Signal) ---
+    # Logic: From Source B -> Split Point -> To XOR -> To AND
+    t.penup(); t.goto(input_x, and_y - 10); t.pendown() # Start at B height
+    t.goto(-70, and_y - 10) # Go forward to split line
+    
+    # Split to AND (Bottom input)
+    t.goto(gate_x, and_y - 10)
+
+    # Split to XOR (Bottom input)
+    t.penup(); t.goto(-70, and_y - 10); t.pendown()
+    t.goto(-70, xor_y - 10) # Go up
+    t.goto(gate_x - 20, xor_y - 10) # Connect to XOR
+    
+    draw_connection_dot(t, -70, and_y - 10) # Draw dot at intersection
+
+    # --- Draw Gates ---
+    # Note: We pass scale=1.5 to make them clearly visible
+    draw_xor_gate(t, gate_x, xor_y, 1.5)
+    draw_and_gate(t, gate_x, and_y, 1.5)
+
+    # --- Draw Outputs ---
+    # XOR Output (Sum)
+    t.penup(); t.goto(gate_x + 70, xor_y); t.pendown(); t.forward(50)
+    t.penup(); t.goto(gate_x + 130, xor_y - 5); t.write("SUM", font=("Arial", 12, "bold"))
+
+    # AND Output (Carry)
+    t.penup(); t.goto(gate_x + 75, and_y); t.pendown(); t.forward(45)
+    t.penup(); t.goto(gate_x + 130, and_y - 5); t.write("CARRY", font=("Arial", 12, "bold"))
+
+    screen.update()
+    screen.exitonclick()
