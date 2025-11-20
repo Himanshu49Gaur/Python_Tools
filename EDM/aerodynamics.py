@@ -58,3 +58,31 @@ def draw_streamline(t, start_x, start_y, length, airfoil_x, airfoil_y, chord):
         t.goto(current_x, current_y + deflection)
         current_x += step
         # current_y += deflection # Accumulate deflection? No, just visual bending
+
+def main():
+    screen = turtle.Screen()
+    screen.setup(width=800, height=600)
+    screen.bgcolor("white")
+    screen.title("Aerodynamics: Airfoil Flow Simulation")
+    screen.tracer(0)
+
+    t = turtle.Turtle()
+    t.hideturtle()
+
+    chord_length = 200
+    airfoil_pos_x = -50
+    airfoil_pos_y = 0
+
+    # Draw Streamlines
+    for y in range(-200, 201, 20):
+        if abs(y) < 10: continue # Skip the line going directly through the center
+        draw_streamline(t, -350, y, 700, airfoil_pos_x, airfoil_pos_y, chord_length)
+
+    # Draw Airfoil on top
+    draw_airfoil(t, airfoil_pos_x, airfoil_pos_y, chord_length, 0)
+
+    screen.update()
+    screen.exitonclick()
+
+if __name__ == "__main__":
+    main()
