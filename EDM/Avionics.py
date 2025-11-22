@@ -22,3 +22,13 @@ def draw_pitch_line(t, y, width, label):
     t.write(label, font=("Consolas", 10, "bold"))
     t.goto(width/2 + 5, y + 2)
     t.write(label, font=("Consolas", 10, "bold"))
+
+def draw_fpm(t):
+    # Flight Path Marker (The little airplane symbol)
+    t.penup(); t.goto(0, 0); t.pendown()
+    t.color("lime") # Changed from 'brightgreen' to 'lime'
+    t.pensize(3)
+    t.circle(10)
+    t.penup(); t.goto(-20, 0); t.pendown(); t.goto(-10, 0) # Left wing
+    t.penup(); t.goto(10, 0); t.pendown(); t.goto(20, 0) # Right wing
+    t.penup(); t.goto(0, 10); t.pendown(); t.goto(0, 20) # Top tail
