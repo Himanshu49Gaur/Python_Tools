@@ -31,3 +31,20 @@ def draw_nozzle_curve(t, start_x, start_y, length, throat_y, exit_y, mirror=Fals
             t.goto(x, -y)
         else:
             t.goto(x, y)
+
+def draw_shock_diamonds(t, start_x, count, size):
+    t.pensize(2)
+    x = start_x
+    for i in range(count):
+        # Draw the diamond shape
+        t.penup()
+        t.goto(x, 0)
+        t.color("cyan", "lightblue")
+        t.pendown()
+        t.begin_fill()
+        t.goto(x + size/2, size/3)
+        t.goto(x + size, 0)
+        t.goto(x + size/2, -size/3)
+        t.goto(x, 0)
+        t.end_fill()
+        x += size
