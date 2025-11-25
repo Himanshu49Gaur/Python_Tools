@@ -1,6 +1,6 @@
 import turtle
 
-ef draw_manometer(t, x, y, height, color):
+def draw_manometer(t, x, y, height, color):
     # Tube
     t.penup()
     t.goto(x, y)
