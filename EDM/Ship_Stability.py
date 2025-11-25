@@ -86,3 +86,28 @@ def draw_stability_points(t, x, y, tilt):
     t.penup(); t.goto(gx, gy); t.pendown()
     t.color("purple"); t.pensize(3); t.goto(gx + 35, gy) # Horizontal approx
     t.penup(); t.goto(gx + 10, gy - 15); t.write("GZ (Righting Arm)", font=("Arial", 8, "bold"))
+
+def main():
+    screen = turtle.Screen()
+    screen.setup(width=800, height=600)
+    screen.bgcolor("white")
+    screen.title("Naval Architecture: Ship Stability (Metacentric Height)")
+    screen.tracer(0)
+
+    t = turtle.Turtle()
+    t.hideturtle()
+
+    tilt = 20
+    draw_hull(t, 0, 100, tilt)
+    draw_stability_points(t, 0, 100, tilt)
+    
+    # Annotations
+    t.penup(); t.goto(-350, 250); t.color("black")
+    t.write("Stable Equilibrium Condition", font=("Arial", 16, "underline"))
+    t.goto(-350, 220); t.write("When M is above G, a Righting Moment is created.", font=("Arial", 12, "normal"))
+
+    screen.update()
+    screen.exitonclick()
+
+if __name__ == "__main__":
+    main()
