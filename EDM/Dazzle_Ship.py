@@ -62,3 +62,38 @@ def draw_dazzle_pattern(t):
             t.circle(random.randint(10, 30), steps=3)
             
         t.end_fill()
+
+def main():
+    screen = turtle.Screen()
+    screen.setup(width=900, height=600)
+    screen.bgcolor("lightblue") # Ocean sky
+    screen.title("Warship Engineering: Dazzle Camouflage")
+    screen.tracer(0)
+
+    t = turtle.Turtle()
+    t.hideturtle()
+    
+    # Draw Ocean
+    t.penup(); t.goto(-450, 0); t.pendown(); t.color("teal"); t.begin_fill()
+    t.goto(450, 0); t.goto(450, -300); t.goto(-450, -300); t.goto(-450, 0); t.end_fill()
+
+    # Draw Ship
+    draw_destroyer_outline(t)
+    
+    # Apply Dazzle
+    # Note: In a real graphics engine we would mask this. 
+    # Here we draw patterns on top, but strictly inside visual bounds is hard in Turtle.
+    # We will draw "on" the hull coordinates.
+    draw_dazzle_pattern(t)
+    
+    # Re-draw outline to clean up edges
+    t.color("black"); t.pensize(3); t.fillcolor(""); 
+    draw_destroyer_outline(t)
+
+    t.penup(); t.goto(0, -100); t.color("white"); t.write("Dazzle Camouflage: Breaking the outline", align="center", font=("Stencil", 16, "bold"))
+
+    screen.update()
+    screen.exitonclick()
+
+if __name__ == "__main__":
+    main()
