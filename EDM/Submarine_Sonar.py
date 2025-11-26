@@ -135,3 +135,43 @@ def draw_sonar_waves(t, start_x, start_y):
         t.setheading(90)
         t.pendown()
         t.circle(radius, -45)
+
+def main():
+    screen = turtle.Screen()
+    screen.setup(width=900, height=600)
+    screen.bgcolor("navy") # Deep ocean
+    screen.title("Naval Tech: Active Sonar")
+    screen.tracer(0)
+
+    t = turtle.Turtle()
+    t.hideturtle()
+
+    # Draw Submarine
+    draw_sub(t, -200, 0)
+    
+    # Draw Target (Sea Mine)
+    t.penup(); t.goto(300, 0); t.color("black"); t.fillcolor("red"); t.begin_fill()
+    t.circle(20); t.end_fill()
+    t.pensize(3); t.goto(300, 20)
+    t.pendown(); t.goto(300, 50); t.goto(300, -10)
+    t.penup(); t.goto(270, 20); t.pendown(); t.goto(330, 20)
+    
+    # Emit Sonar
+    draw_sonar_waves(t, -200, 0)
+    
+    # Reflection (Echo) - Dashed lines returning
+    t.color("yellow")
+    t.pensize(2)
+    for i in range(1, 5):
+        t.penup()
+        t.goto(300 - i*50, 0)
+        t.pendown()
+        t.circle(10, 360) # Small reflected packets
+
+    t.penup(); t.goto(0, 200); t.color("white"); t.write("ACTIVE SONAR PING", align="center", font=("Courier", 18, "bold"))
+
+    screen.update()
+    screen.exitonclick()
+
+if __name__ == "__main__":
+    main()
