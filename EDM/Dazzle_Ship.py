@@ -33,3 +33,32 @@ def draw_destroyer_outline(t):
     t.begin_fill(); t.left(80); t.forward(40); t.right(80); t.forward(20); t.right(100); t.forward(40); t.end_fill()
     t.penup(); t.goto(-10, 80); t.setheading(0); t.pendown(); 
     t.begin_fill(); t.left(80); t.forward(40); t.right(80); t.forward(20); t.right(100); t.forward(40); t.end_fill()
+
+def draw_dazzle_pattern(t):
+    # Overlay random geometric shapes to simulate dazzle
+    colors = ["black", "white", "navy", "lightblue"]
+    t.pensize(0)
+    
+    # Limit drawing to roughly the ship area using clip logic (simulated by placing shapes carefully)
+    # We will just draw strips over the hull area
+    
+    for i in range(20):
+        t.penup()
+        x = random.randint(-280, 150)
+        y = random.randint(5, 35)
+        t.goto(x, y)
+        
+        t.color(random.choice(colors))
+        t.begin_fill()
+        
+        type = random.choice(["stripe", "triangle"])
+        if type == "stripe":
+            angle = random.choice([45, 135, 90])
+            t.setheading(angle)
+            length = random.randint(30, 80)
+            width = random.randint(10, 25)
+            t.forward(length); t.right(90); t.forward(width); t.right(90); t.forward(length); t.right(90); t.forward(width)
+        else:
+            t.circle(random.randint(10, 30), steps=3)
+            
+        t.end_fill()
