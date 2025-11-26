@@ -62,3 +62,37 @@ def draw_dazzle_pattern(t):
             t.circle(random.randint(10, 30), steps=3)
             
         t.end_fill()
+
+import turtle
+
+def draw_sub(t, x, y):
+    t.penup()
+    t.goto(x, y)
+    t.color("black")
+    t.fillcolor("darkslategray")
+    t.begin_fill()
+    
+    # Main pressure hull (Ellipse-ish)
+    t.setheading(0)
+    t.circle(40, 90)
+    t.forward(120)
+    t.circle(40, 180)
+    t.forward(120)
+    t.circle(40, 90)
+    t.end_fill()
+    
+    # Sail (Conning Tower)
+    t.penup()
+    t.goto(x - 20, y + 40)
+    t.begin_fill()
+    t.setheading(0)
+    t.forward(60)
+    t.left(90); t.forward(30)
+    t.left(90); t.forward(40) # Taper
+    t.left(20); t.forward(32)
+    t.end_fill()
+    
+    # Propeller
+    t.penup(); t.goto(x - 170, y); t.pensize(4); t.color("gold"); t.pendown()
+    t.setheading(120); t.forward(30); t.backward(30)
+    t.setheading(240); t.forward(30); t.backward(30)
