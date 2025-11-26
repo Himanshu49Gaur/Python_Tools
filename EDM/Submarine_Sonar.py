@@ -115,3 +115,23 @@ def draw_sonar_waves(t, start_x, start_y):
         t.setheading(90)
         t.pendown()
         t.circle(radius, -45)
+
+
+def draw_sonar_waves(t, start_x, start_y):
+    t.color("lime")
+    t.pensize(2)
+    t.setheading(0)
+    
+    for i in range(1, 10):
+        radius = i * 40
+        t.penup()
+        t.goto(start_x + 60 + radius, start_y) # Start at right side of circle
+        t.setheading(90)
+        t.pendown()
+        # Draw arc
+        t.circle(radius, 45)
+        t.penup()
+        t.goto(start_x + 60 + radius, start_y)
+        t.setheading(90)
+        t.pendown()
+        t.circle(radius, -45)
