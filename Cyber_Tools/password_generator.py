@@ -169,3 +169,9 @@ class PasswordGeneratorApp(QWidget):
         score = self.calculate_strength(user_pwd)
         msg = f"Your Password Strength: {score}%"
         QMessageBox.information(self, "Comparison Result", msg)
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = PasswordGeneratorApp()
+    window.show()
+    sys.exit(app.exec_())
