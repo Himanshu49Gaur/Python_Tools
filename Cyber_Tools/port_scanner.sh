@@ -18,3 +18,7 @@ echo ""
 echo "Scanning ports $start_port to $end_port on $target ..."
 echo "Results will be saved to $outfile"
 echo "----------------------------------------------"
+
+# Create or clear output file
+echo "Port Scan Results for $target" > "$outfile"
+echo "----------------------------------------------" >> "$outfile"
