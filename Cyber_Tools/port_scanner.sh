@@ -51,3 +51,7 @@ scan_port() {
         echo "Port $port OPEN ($service)" >> "$outfile"
     fi
 }
+
+export -f scan_port get_service
+export target outfile
+
