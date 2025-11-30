@@ -42,3 +42,12 @@ get_service() {
     esac
 }
 
+scan_port() {
+    port=$1
+    nc -z -w 1 $target $port 2>/dev/null
+    if [ $? -eq 0 ]; then
+        service=$(get_service $port)
+        echo "Port $port OPEN ($service)"
+        echo "Port $port OPEN ($service)" >> "$outfile"
+    fi
+}
