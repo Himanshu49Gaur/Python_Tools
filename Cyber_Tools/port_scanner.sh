@@ -22,3 +22,23 @@ echo "----------------------------------------------"
 # Create or clear output file
 echo "Port Scan Results for $target" > "$outfile"
 echo "----------------------------------------------" >> "$outfile"
+
+# Service mapping function
+get_service() {
+    case $1 in
+        21) echo "FTP";;
+        22) echo "SSH";;
+        23) echo "Telnet";;
+        25) echo "SMTP";;
+        53) echo "DNS";;
+        80) echo "HTTP";;
+        110) echo "POP3";;
+        143) echo "IMAP";;
+        443) echo "HTTPS";;
+        3306) echo "MySQL";;
+        3389) echo "RDP";;
+        8080) echo "HTTP-ALT";;
+        *) echo "Unknown";;
+    esac
+}
+
