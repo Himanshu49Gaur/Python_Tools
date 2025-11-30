@@ -57,3 +57,7 @@ export target outfile
 
 # Multi-thread scanning using xargs with 100 threads
 seq $start_port $end_port | xargs -P 100 -I {} bash -c 'scan_port "$@"' _ {}
+
+echo "----------------------------------------------"
+echo "Scan complete!"
+echo "Open ports saved to $outfile"
