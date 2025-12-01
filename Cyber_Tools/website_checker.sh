@@ -74,3 +74,10 @@ echo "CSV output : $CSV_FILE"
 echo "HTML output: $HTML_FILE"
 echo ""
 
+# -------- Prepare worker script --------
+WORKER_SH="$TMPDIR/check_worker.sh"
+cat > "$WORKER_SH" <<'WORKER'
+#!/usr/bin/env bash
+set -euo pipefail
+site="$1"
+CURL_TIMEOUT="$2"
