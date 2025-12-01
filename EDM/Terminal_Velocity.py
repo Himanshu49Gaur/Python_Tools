@@ -57,3 +57,6 @@ def terminal_velocity_simulation():
     plt.legend()
     plt.grid(True)
     plt.show()
+
+if __name__ == "__main__":
+    terminal_velocity_simulation()
