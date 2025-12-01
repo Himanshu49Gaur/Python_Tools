@@ -120,3 +120,9 @@ if [[ ! -s "$WORKLIST" ]]; then
     echo "No sites to check in $SITES_FILE"
     exit 0
 fi
+
+# Use xargs to run worker in parallel
+# Each output line appended to tmp_results (order may vary)
+TMP_RESULTS="$TMPDIR/results.unsorted.csv"
+: > "$TMP_RESULTS"
+
