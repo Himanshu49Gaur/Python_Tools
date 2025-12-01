@@ -110,3 +110,13 @@ fi
 printf '%s,%s,%s,%s\n' "$site" "$code" "$time_total" "$status"
 WORKER
 chmod +x "$WORKER_SH"
+
+# -------- Run checks in parallel and collect results --------
+# Create worklist with non-empty trimmed lines and ignoring comments
+WORKLIST="$TMPDIR/worklist.txt"
+grep -vE '^\s*$|^\s*#' "$SITES_FILE" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' > "$WORKLIST"
+
+if [[ ! -s "$WORKLIST" ]]; then
+    echo "No sites to check in $SITES_FILE"
+    exit 0
+fi
