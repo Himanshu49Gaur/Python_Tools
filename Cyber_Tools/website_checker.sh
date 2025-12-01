@@ -9,3 +9,8 @@ TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 CSV_FILE="website_report_${TIMESTAMP}.csv"
 HTML_FILE="website_report_${TIMESTAMP}.html"
 SUMMARY_FILE="website_report_summary_${TIMESTAMP}.txt"
+
+RED='\033[0;31m'
+YELLOW='\033[0;33m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
