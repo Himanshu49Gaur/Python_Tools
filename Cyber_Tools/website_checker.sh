@@ -58,3 +58,11 @@ if [[ ! -f "$SITES_FILE" ]]; then
     exit 2
 fi
 
+# check mail command presence if EMAIL provided
+if [[ -n "$EMAIL" ]]; then
+    if ! command -v mail >/dev/null 2>&1; then
+        echo -e "${YELLOW}Warning:${NC} 'mail' command not found. Email notification will be skipped."
+        EMAIL=""
+    fi
+fi
+
