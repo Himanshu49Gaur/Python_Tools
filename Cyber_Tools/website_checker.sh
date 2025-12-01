@@ -212,3 +212,11 @@ tail -n +2 "$CSV_FILE" | while IFS=, read -r site code time_total status; do
 ROW
 done
 
+cat >> "$HTML_FILE" <<HTMLBOTTOM
+</table>
+</body>
+</html>
+HTMLBOTTOM
+
+echo "HTML report saved to $HTML_FILE"
+
