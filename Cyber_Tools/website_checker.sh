@@ -66,3 +66,11 @@ if [[ -n "$EMAIL" ]]; then
     fi
 fi
 
+echo "Starting Website Status Check"
+echo "Sites file : $SITES_FILE"
+echo "Parallel   : $PARALLEL"
+[[ -n "$EMAIL" ]] && echo "Notify to  : $EMAIL"
+echo "CSV output : $CSV_FILE"
+echo "HTML output: $HTML_FILE"
+echo ""
+
