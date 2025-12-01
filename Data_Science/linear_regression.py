@@ -53,3 +53,6 @@ def simple_linear_regression():
     
     print(f"Model Learned:\nSlope (m): {m:.2f}\nIntercept (b): {b:.2f}")
     plt.show()
+
+if __name__ == "__main__":
+    simple_linear_regression()
