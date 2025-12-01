@@ -126,3 +126,4 @@ fi
 TMP_RESULTS="$TMPDIR/results.unsorted.csv"
 : > "$TMP_RESULTS"
 
+export CURL_TIMEOUT
