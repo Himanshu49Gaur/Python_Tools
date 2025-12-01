@@ -65,3 +65,6 @@ def kinematics_trinity():
     
     print("Graph generated. Notice how Velocity is zero exactly when Position peaks.")
     plt.show()
+
+if __name__ == "__main__":
+    kinematics_trinity()
