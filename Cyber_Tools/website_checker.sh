@@ -135,3 +135,7 @@ cat "$WORKLIST" | xargs -P "$PARALLEL" -I {} bash -c '"'"$WORKER_SH"'" "{}" "'"$
 # sort results by site for stable output
 sort "$TMP_RESULTS" > "$TMPDIR/results.sorted.csv"
 
+# Produce final CSV with header
+echo "site,http_code,response_time_seconds,status" > "$CSV_FILE"
+cat "$TMPDIR/results.sorted.csv" >> "$CSV_FILE"
+
