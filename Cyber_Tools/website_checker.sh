@@ -105,3 +105,8 @@ elif [[ "$code" -ge 200 && "$code" -lt 400 ]]; then
 else
   status="ERROR"
 fi
+
+# Print CSV line: site,code,time,status
+printf '%s,%s,%s,%s\n' "$site" "$code" "$time_total" "$status"
+WORKER
+chmod +x "$WORKER_SH"
