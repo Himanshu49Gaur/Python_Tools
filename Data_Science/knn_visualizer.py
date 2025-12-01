@@ -69,3 +69,4 @@ def knn_visualization():
     plt.legend()
     plt.grid(True, alpha=0.3)
     plt.show()
+
