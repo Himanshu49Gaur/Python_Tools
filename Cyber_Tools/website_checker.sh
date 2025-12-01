@@ -97,3 +97,11 @@ time_total=$(awk '{print $2}' <<< "$result")
 code=$(echo "$code")
 time_total=$(echo "$time_total")
 
+# Determine status string
+if [[ "$code" == "000" ]]; then
+  status="DOWN"
+elif [[ "$code" -ge 200 && "$code" -lt 400 ]]; then
+  status="UP"
+else
+  status="ERROR"
+fi
