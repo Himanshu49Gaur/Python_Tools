@@ -70,3 +70,5 @@ def knn_visualization():
     plt.grid(True, alpha=0.3)
     plt.show()
 
+if __name__ == "__main__":
+    knn_visualization()
