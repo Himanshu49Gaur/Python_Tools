@@ -55,3 +55,6 @@ def work_done_simulation():
     ax.legend(fontsize=10)
     ax.grid(True, linestyle=':')
     plt.show()
+
+if __name__ == "__main__":
+    work_done_simulation()
