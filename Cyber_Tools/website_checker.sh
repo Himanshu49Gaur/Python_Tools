@@ -220,3 +220,43 @@ HTMLBOTTOM
 
 echo "HTML report saved to $HTML_FILE"
 
+
+# -------- Send email if any DOWN and email configured --------
+if [[ -n "$EMAIL" && "$DOWN_COUNT" -gt 0 ]]; then
+    SUBJECT="ALERT: $DOWN_COUNT site(s) DOWN - Website Status Report ($TIMESTAMP)"
+    {
+      echo "Hello,"
+      echo ""
+      echo "$DOWN_COUNT site(s) were detected as DOWN when checking the list in $SITES_FILE."
+      echo ""
+      echo "Summary:"
+      cat "$SUMMARY_FILE"
+      echo ""
+      echo "CSV report is attached."
+    } > "$TMPDIR/email_body.txt"
+
+    # attach CSV by mail -s with uuencode if mail supports it; fallback to body only
+    if command -v uuencode >/dev/null 2>&1 && command -v mail >/dev/null 2>&1; then
+        # Many systems provide uuencode; mail -s "subject" recipient < body
+        (uuencode "$CSV_FILE" "$(basename "$CSV_FILE")") > "$TMPDIR/attach.uue" || true
+        # Use mail with attachment (some mail implementations support -a flag)
+        if mail -V 2>&1 | grep -qi "heirloom" >/dev/null 2>&1; then
+            # heirloom-mailx supports -a
+            mail -s "$SUBJECT" -a "$CSV_FILE" "$EMAIL" < "$TMPDIR/email_body.txt"
+        else
+            # fallback: send body and append uuencoded attachment
+            cat "$TMPDIR/email_body.txt" - <(uuencode "$CSV_FILE" "$(basename "$CSV_FILE")") | mail -s "$SUBJECT" "$EMAIL"
+        fi
+    else
+        # simple mail without attachment
+        mail -s "$SUBJECT" "$EMAIL" < "$TMPDIR/email_body.txt"
+    fi
+
+    echo "Notification email sent to $EMAIL"
+elif [[ "$DOWN_COUNT" -gt 0 ]]; then
+    echo -e "${YELLOW}Warning:${NC} Some sites are DOWN but email notification not configured (no -e EMAIL or mail not found).${NC}"
+else
+    echo "No DOWN sites found. No email sent."
+fi
+
+echo "Done."
