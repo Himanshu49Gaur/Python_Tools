@@ -47,3 +47,8 @@ while getopts ":f:p:e:h" opt; do
     : ) echo "Invalid Option: -$OPTARG requires an argument" >&2; usage ;;
   esac
 done
+
+if [[ -z "${SITES_FILE:-}" ]]; then
+    echo "Error: sites file required."
+    usage
+fi
