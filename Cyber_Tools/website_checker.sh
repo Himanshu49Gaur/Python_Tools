@@ -139,3 +139,21 @@ sort "$TMP_RESULTS" > "$TMPDIR/results.sorted.csv"
 echo "site,http_code,response_time_seconds,status" > "$CSV_FILE"
 cat "$TMPDIR/results.sorted.csv" >> "$CSV_FILE"
 
+# -------- Terminal color-coded output and generate summary --------
+DOWN_COUNT=0
+UP_COUNT=0
+ERROR_COUNT=0
+echo "Live results:"
+while IFS=, read -r site code time_total status; do
+    if [[ "$status" == "UP" ]]; then
+        echo -e "${GREEN}$site is UP | ${code} | ${time_total}s${NC}"
+        ((UP_COUNT++))
+    elif [[ "$status" == "ERROR" ]]; then
+        echo -e "${YELLOW}$site has ERROR (code ${code}) | ${time_total}s${NC}"
+        ((ERROR_COUNT++))
+    else
+        echo -e "${RED}$site is DOWN or unreachable${NC}"
+        ((DOWN_COUNT++))
+    fi
+done < <(tail -n +1 "$CSV_FILE" | sed '1d')   # skip header
+
