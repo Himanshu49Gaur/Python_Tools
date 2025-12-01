@@ -157,3 +157,16 @@ while IFS=, read -r site code time_total status; do
     fi
 done < <(tail -n +1 "$CSV_FILE" | sed '1d')   # skip header
 
+# -------- Summary & write human-readable summary --------
+{
+  echo "Website Status Report"
+  echo "Generated: $(date)"
+  echo "Total sites: $(wc -l < "$WORKLIST")"
+  echo "UP: $UP_COUNT"
+  echo "ERROR: $ERROR_COUNT"
+  echo "DOWN: $DOWN_COUNT"
+  echo ""
+  echo "Details (site,code,time,status):"
+  tail -n +2 "$CSV_FILE"
+} > "$SUMMARY_FILE"
+
