@@ -43,3 +43,6 @@ def demonstrate_clt():
     
     plt.suptitle("Central Limit Theorem: From Uniform to Normal Distribution", fontsize=16)
     plt.show()
+
+if __name__ == "__main__":
+    demonstrate_clt()
