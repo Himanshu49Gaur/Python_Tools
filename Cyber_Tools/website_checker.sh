@@ -199,3 +199,16 @@ cat > "$HTML_FILE" <<HTMLTOP
 <tr><th>Site</th><th>HTTP Code</th><th>Response Time (s)</th><th>Status</th></tr>
 HTMLTOP
 
+# append rows
+tail -n +2 "$CSV_FILE" | while IFS=, read -r site code time_total status; do
+  cls="unknown"
+  if [[ "$status" == "UP" ]]; then cls="up"; fi
+  if [[ "$status" == "ERROR" ]]; then cls="error"; fi
+  if [[ "$status" == "DOWN" ]]; then cls="down"; fi
+  # escape HTML entities in site
+  esc_site=$(printf '%s' "$site" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g')
+  cat >> "$HTML_FILE" <<ROW
+<tr class="$cls"><td>$esc_site</td><td>$code</td><td>$time_total</td><td>$status</td></tr>
+ROW
+done
+
