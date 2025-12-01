@@ -61,3 +61,6 @@ def kmeans_from_scratch():
     plt.legend()
     plt.grid(True, alpha=0.3)
     plt.show()
+
+if __name__ == "__main__":
+    kmeans_from_scratch()
