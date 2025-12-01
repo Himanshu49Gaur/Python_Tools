@@ -57,3 +57,6 @@ def phase_space_portrait():
 
     plt.axis('equal') # Essential for Phase Space to look correct
     plt.show()
+
+if __name__ == "__main__":
+    phase_space_portrait()
