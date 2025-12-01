@@ -77,14 +77,4 @@ echo ""
 # -------- Prepare worker script --------
 WORKER_SH="$TMPDIR/check_worker.sh"
 cat > "$WORKER_SH" <<'WORKER'
-#!/usr/bin/env bash
-set -euo pipefail
-site="$1"
-CURL_TIMEOUT="$2"
 
-# normalize: if no scheme, prepend http://
-if [[ "$site" != http*://* ]]; then
-  url="http://$site"
-else
-  url="$site"
-fi
