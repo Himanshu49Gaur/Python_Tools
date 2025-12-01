@@ -174,3 +174,28 @@ echo ""
 echo "Summary saved to $SUMMARY_FILE"
 echo "CSV saved to $CSV_FILE"
 
+# -------- Generate HTML report --------
+cat > "$HTML_FILE" <<HTMLTOP
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Website Status Report - $TIMESTAMP</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ddd; padding: 8px; text-align:left; }
+  th { background-color: #f2f2f2; }
+  .up { background-color: #c8f7c5; }       /* green-ish */
+  .error { background-color: #fff0b3; }    /* yellow-ish */
+  .down { background-color: #f7c5c5; }     /* red-ish */
+</style>
+</head>
+<body>
+<h1>Website Status Report</h1>
+<p>Generated: $(date)</p>
+<p>Summary: Total: $(wc -l < "$WORKLIST"), UP: $UP_COUNT, ERROR: $ERROR_COUNT, DOWN: $DOWN_COUNT</p>
+<table>
+<tr><th>Site</th><th>HTTP Code</th><th>Response Time (s)</th><th>Status</th></tr>
+HTMLTOP
+
