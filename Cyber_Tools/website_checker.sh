@@ -32,3 +32,7 @@ Options:
 EOF
     exit 1
 }
+
+# -------- Parse args --------
+PARALLEL=$DEFAULT_PARALLEL
+EMAIL=""
