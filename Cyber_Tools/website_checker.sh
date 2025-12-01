@@ -52,3 +52,9 @@ if [[ -z "${SITES_FILE:-}" ]]; then
     echo "Error: sites file required."
     usage
 fi
+
+if [[ ! -f "$SITES_FILE" ]]; then
+    echo "Error: File '$SITES_FILE' not found."
+    exit 2
+fi
+
