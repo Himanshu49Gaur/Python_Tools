@@ -81,3 +81,10 @@ cat > "$WORKER_SH" <<'WORKER'
 set -euo pipefail
 site="$1"
 CURL_TIMEOUT="$2"
+
+# normalize: if no scheme, prepend http://
+if [[ "$site" != http*://* ]]; then
+  url="http://$site"
+else
+  url="$site"
+fi
