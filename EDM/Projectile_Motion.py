@@ -64,3 +64,6 @@ def projectile_simulation():
     plt.text(x_fine.max()*0.6, y_fine.max()*0.9, equation_text, fontsize=14, bbox=dict(facecolor='white', alpha=0.8))
 
     plt.show()
+
+if __name__ == "__main__":
+    projectile_simulation()
