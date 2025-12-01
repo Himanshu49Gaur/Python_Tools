@@ -36,3 +36,14 @@ EOF
 # -------- Parse args --------
 PARALLEL=$DEFAULT_PARALLEL
 EMAIL=""
+
+while getopts ":f:p:e:h" opt; do
+  case ${opt} in
+    f ) SITES_FILE=$OPTARG ;;
+    p ) PARALLEL=$OPTARG ;;
+    e ) EMAIL=$OPTARG ;;
+    h ) usage ;;
+    \? ) echo "Invalid Option: -$OPTARG" >&2; usage ;;
+    : ) echo "Invalid Option: -$OPTARG requires an argument" >&2; usage ;;
+  esac
+done
