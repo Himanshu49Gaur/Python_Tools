@@ -131,3 +131,7 @@ export CURL_TIMEOUT
 # xargs approach — one arg per line
 # For portability, use bash -c wrapper to call worker script
 cat "$WORKLIST" | xargs -P "$PARALLEL" -I {} bash -c '"'"$WORKER_SH"'" "{}" "'"$CURL_TIMEOUT"'"' >> "$TMP_RESULTS"
+
+# sort results by site for stable output
+sort "$TMP_RESULTS" > "$TMPDIR/results.sorted.csv"
+
