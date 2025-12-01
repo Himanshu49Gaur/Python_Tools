@@ -55,3 +55,6 @@ def time_series_analysis():
     plt.text(df.index[100], 45, "Note how SMA_30 lags behind\nthe sudden changes!", fontsize=10, bbox=dict(facecolor='white', alpha=0.8))
     
     plt.show()
+
+if __name__ == "__main__":
+    time_series_analysis()
