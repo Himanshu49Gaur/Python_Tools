@@ -88,3 +88,12 @@ if [[ "$site" != http*://* ]]; then
 else
   url="$site"
 fi
+
+# Use curl to get status code and total time. If curl fails, return 000 and time 0
+result=$(curl -s -o /dev/null -w "%{http_code} %{time_total}" --max-time "$CURL_TIMEOUT" "$url" 2>/dev/null) || result="000 0"
+code=$(awk '{print $1}' <<< "$result")
+time_total=$(awk '{print $2}' <<< "$result")
+# trim
+code=$(echo "$code")
+time_total=$(echo "$time_total")
+
