@@ -166,11 +166,11 @@ done < <(tail -n +1 "$CSV_FILE" | sed '1d')   # skip header
   echo "ERROR: $ERROR_COUNT"
   echo "DOWN: $DOWN_COUNT"
   echo ""
-
-  echo ""
-echo "Summary saved to $SUMMARY_FILE"
-echo "CSV saved to $CSV_FILE"
   echo "Details (site,code,time,status):"
   tail -n +2 "$CSV_FILE"
 } > "$SUMMARY_FILE"
+
+echo ""
+echo "Summary saved to $SUMMARY_FILE"
+echo "CSV saved to $CSV_FILE"
 
