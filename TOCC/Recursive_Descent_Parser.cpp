@@ -58,4 +58,18 @@ void T() {
     }
 }
 
+int main() {
+    cout << "Enter expression (use 'i' for id, e.g., i+i+i): ";
+    input = "i+i"; // Example input
+    lookahead = input[pos];
 
+    cout << "Input: " << input << endl;
+    E();
+
+    if (lookahead == '$')
+        cout << "Parsing Successful!" << endl;
+    else
+        cout << "Error: Unexpected symbol at end." << endl;
+
+    return 0;
+}
