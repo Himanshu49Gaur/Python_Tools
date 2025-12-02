@@ -48,4 +48,14 @@ void E_prime() {
     }
 }
 
+// Rule: T -> id (we assume 'i' represents an identifier)
+void T() {
+    if (lookahead == 'i') {
+        cout << "Parsing T -> id" << endl;
+        match('i');
+    } else {
+        error();
+    }
+}
+
 
