@@ -29,3 +29,8 @@ class DFA:
 # Test Cases
 dfa = DFA()
 test_strings = ["11", "110", "1001"] # 3 (accept), 6 (accept), 9 (accept)
+
+for s in test_strings:
+    print(f"\nTesting '{s}' (Decimal: {int(s, 2)}):")
+    result = dfa.process_string(s)
+    print(f"Accepted? {result}")
