@@ -42,3 +42,11 @@ class TuringMachine {
         console.log(`Final Tape:   ${this.tape.join('')}`);
     }
 }
+
+// Test: Increment Binary Numbers
+console.log("--- Turing Machine: Binary Incrementer ---");
+const tm1 = new TuringMachine("101"); // 5 -> 6 (110)
+tm1.run();
+
+const tm2 = new TuringMachine("111"); // 7 -> 8 (1000)
+tm2.run();
