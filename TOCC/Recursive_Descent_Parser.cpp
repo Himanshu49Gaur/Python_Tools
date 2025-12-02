@@ -27,3 +27,12 @@ void match(char t) {
         error();
     }
 }
+
+// Rule: E -> T E'
+void E() {
+    cout << "Parsing E -> T E'" << endl;
+    T();
+    E_prime();
+}
+
+
