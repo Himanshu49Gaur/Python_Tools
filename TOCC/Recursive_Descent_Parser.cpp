@@ -17,3 +17,13 @@ void error() {
     cout << "Syntax Error!" << endl;
     exit(1);
 }
+
+void match(char t) {
+    if (lookahead == t) {
+        pos++;
+        if (pos < input.length()) lookahead = input[pos];
+        else lookahead = '$'; // End of string
+    } else {
+        error();
+    }
+}
