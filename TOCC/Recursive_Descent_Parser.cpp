@@ -35,4 +35,17 @@ void E() {
     E_prime();
 }
 
+// Rule: E' -> + T E' | epsilon
+void E_prime() {
+    if (lookahead == '+') {
+        cout << "Parsing E' -> + T E'" << endl;
+        match('+');
+        T();
+        E_prime();
+    } else {
+        cout << "Parsing E' -> epsilon" << endl;
+        // Do nothing (epsilon)
+    }
+}
+
 
