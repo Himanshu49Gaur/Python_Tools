@@ -13,3 +13,7 @@ void E_prime();
 void T();
 void match(char t);
 
+void error() {
+    cout << "Syntax Error!" << endl;
+    exit(1);
+}
