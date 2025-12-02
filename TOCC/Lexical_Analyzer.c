@@ -49,3 +49,18 @@ void get_next_token(char **input) {
     
     *input = ptr; // Update the pointer
 }
+
+int main() {
+    char input[] = "sum = a + 50";
+    char *ptr = input;
+    
+    printf("Analyzing: \"%s\"\n", input);
+    printf("--------------------------\n");
+    
+    while (*ptr != '\0') {
+        get_next_token(&ptr);
+    }
+    
+    return 0;
+}
+
