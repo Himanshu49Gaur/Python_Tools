@@ -29,4 +29,5 @@ def analyze_correlations():
     print("Generating heatmap...")
     plt.show()
 
-
+if __name__ == "__main__":
+    analyze_correlations()
