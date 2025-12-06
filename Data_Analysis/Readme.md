@@ -1,4 +1,4 @@
-# Data Analysis Tools 📊
+# Data Analysis Tools 
 
 Welcome to the Data Analysis Tools section of my Python Toolkit. This area is dedicated to scripts and projects focused on the process of inspecting, cleaning, transforming, and modeling data to discover useful information and support decision-making.
 
