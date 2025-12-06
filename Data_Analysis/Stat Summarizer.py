@@ -30,4 +30,5 @@ def analyze_student_performance():
     top_student = df.loc[df['Score'].idxmax()]
     print(f"\n--- Top Performing Student ---\n{top_student['Student']} with {top_student['Score']} points.")
 
-
+if __name__ == "__main__":
+    analyze_student_performance()
