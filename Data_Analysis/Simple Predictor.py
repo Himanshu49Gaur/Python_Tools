@@ -40,3 +40,6 @@ def predict_house_prices():
     plt.legend()
     plt.grid(True, alpha=0.3)
     plt.show()
+
+if __name__ == "__main__":
+    predict_house_prices()
