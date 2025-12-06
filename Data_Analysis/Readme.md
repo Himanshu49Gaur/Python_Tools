@@ -39,6 +39,6 @@ I am creating these tools to practice and showcase the end-to-end data analysis 
 
 ---
 
-### ⚠️ Disclaimer
+### Disclaimer
 
 The tools and analyses in this directory are for **educational and illustrative purposes**. The quality of any insight is directly dependent on the quality and context of the input data. Always remember that **correlation does not imply causation**. Critical conclusions should be verified with domain expertise and further investigation.
