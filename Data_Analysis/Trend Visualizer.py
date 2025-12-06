@@ -36,4 +36,5 @@ def plot_sales_trends():
     print("Generating plot...")
     plt.show()
 
-
+if __name__ == "__main__":
+    plot_sales_trends()
