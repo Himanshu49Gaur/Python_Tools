@@ -40,3 +40,6 @@ def clean_data():
     print("\n--- 3. Summary ---")
     print(f"Original Rows: {len(df)}")
     print(f"Cleaned Rows: {len(df_cleaned)}")
+
+if __name__ == "__main__":
+    clean_data()
