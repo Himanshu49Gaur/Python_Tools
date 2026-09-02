@@ -2,14 +2,14 @@
 
 ---
 
-## Executive Summary
+## 📌 Executive Summary
 This candidate submission presents an end-to-end data science investigation analyzing the relationship between **Hyperliquid Perpetual DEX trader behavior** and **Bitcoin macro market sentiment (Fear & Greed Index)**.
 
 By merging high-frequency trade execution logs with daily market sentiment scores, this project identifies behavioral biases, leverage risks, positioning tendencies across performance cohorts, and statistical signals for Web3 algorithmic execution strategies.
 
 ---
 
-## Standardized Submission Structure
+## 📂 Standardized Submission Structure
 
 ```
 ds_<candidate_name>/
@@ -33,7 +33,7 @@ ds_<candidate_name>/
 
 ---
 
-## Google Colab Links
+## 🔗 Google Colab Links
 *(To view or run the interactive notebooks in Google Colab, import `notebook_1.ipynb` or `notebook_2.ipynb` into Colab or open via GitHub)*
 
 * **Notebook 1 (Core Analysis & EDA):** `[Colab Link Placeholder - Set permissions to 'Anyone with the link can view']`
@@ -41,7 +41,7 @@ ds_<candidate_name>/
 
 ---
 
-## Key Findings & Statistical Verification
+## 📊 Key Findings & Statistical Verification
 
 1. **H1 (Leverage Escalation):** Retail and underperforming accounts increase average position leverage during `Extreme Greed` regimes, leading to a surge in liquidation events.
 2. **H2 (Contrarian Positioning):** Accounts in the **Top 10% Decile** (cumulative net PnL) act counter-cyclically by accumulating Long positions during `Extreme Fear` and scaling Shorts during `Extreme Greed`.
@@ -50,7 +50,7 @@ ds_<candidate_name>/
 
 ---
 
-## Quickstart & Local Environment Setup
+## 🚀 Quickstart & Local Environment Setup
 
 ### 1. Requirements
 * Python 3.10 or higher
@@ -77,7 +77,6 @@ pip install pandas numpy matplotlib seaborn scipy reportlab fpdf2 jupyter
 
 ---
 
-## License & Attribution
+## 📄 License & Attribution
 * **Trader Data:** Hyperliquid On-Chain Perpetual DEX Execution Logs
 * **Sentiment Index:** Bitcoin Fear & Greed Index
-
